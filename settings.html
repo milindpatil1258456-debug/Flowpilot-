@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings — FlowPilot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">✦ FlowPilot</div>
+
+        <nav class="dashboard-nav">
+
+    <a href="dashboard.html">
+        <span>⌂</span>
+        Overview
+    </a>
+
+    <a href="tasks.html">
+        <span>✓</span>
+        Tasks
+    </a>
+
+    <a href="projects.html">
+        <span>▣</span>
+        Projects
+    </a>
+
+    <a href="analytics.html">
+        <span>◈</span>
+        Analytics
+    </a>
+
+    <a href="settings.html" class="active">
+        <span>⚙</span>
+        Settings
+    </a>
+
+</nav>
+
+        <a href="index.html" class="back-link">
+            ← Back to website
+        </a>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+        <div class="dashboard-top">
+            <div>
+                <p class="eyebrow">ACCOUNT</p>
+                <h1>Settings</h1>
+                <p>Manage your FlowPilot workspace.</p>
+            </div>
+        </div>
+
+
+        <section class="settings-panel">
+
+            <div class="settings-section">
+
+                <h2>Profile</h2>
+                <p>Update your personal information.</p>
+
+                <label>Name</label>
+                <input type="text" value="Alex Morgan">
+
+                <label>Email</label>
+                <input type="email" value="alex@flowpilot.com">
+
+                <button class="save-btn" id="saveProfile">
+                    Save Changes
+                </button>
+
+            </div>
+
+
+            <div class="settings-section">
+
+                <h2>Workspace</h2>
+                <p>Customize your FlowPilot workspace.</p>
+
+                <label>Workspace Name</label>
+                <input type="text" value="My Workspace">
+
+                <label>Timezone</label>
+
+                <select>
+                    <option>India Standard Time (IST)</option>
+                    <option>GMT</option>
+                    <option>Eastern Time</option>
+                </select>
+
+            </div>
+
+
+            <div class="settings-section danger-zone">
+
+                <h2>Account</h2>
+                <p>Manage your account preferences.</p>
+
+                <button class="logout-btn" id="logoutBtn">
+                    Log Out
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

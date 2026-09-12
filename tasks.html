@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks — FlowPilot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-logo">✦ FlowPilot</div>
+
+        <nav class="dashboard-nav">
+
+    <a href="dashboard.html">
+        <span>⌂</span>
+        Overview
+    </a>
+
+    <a href="tasks.html" class="active">
+        <span>✓</span>
+        Tasks
+    </a>
+
+    <a href="projects.html">
+        <span>▣</span>
+        Projects
+    </a>
+
+    <a href="analytics.html">
+        <span>◈</span>
+        Analytics
+    </a>
+
+    <a href="settings.html">
+        <span>⚙</span>
+        Settings
+    </a>
+
+</nav>
+
+        <a href="index.html" class="back-link">← Back to website</a>
+    </aside>
+
+
+    <main class="dashboard-main">
+
+        <div class="dashboard-top">
+            <div>
+                <p class="eyebrow">WORKSPACE</p>
+                <h1>Tasks</h1>
+                <p>Manage your work and stay organized.</p>
+            </div>
+
+            <button class="add-project" id="addTaskBtn">
+                + Add Task
+            </button>
+        </div>
+
+
+        <section class="dashboard-panel">
+
+            <div class="panel-heading">
+                <div>
+                    <h2>My Tasks</h2>
+                    <p id="taskStatus">4 tasks remaining</p>
+                </div>
+            </div>
+
+
+            <div class="task-list">
+
+                <div class="task-row">
+                    <button class="task-check"></button>
+                    <div>
+                        <strong>Complete project brief</strong>
+                        <small>Today • High priority</small>
+                    </div>
+                    <span class="task-tag high">High</span>
+                </div>
+
+                <div class="task-row">
+                    <button class="task-check"></button>
+                    <div>
+                        <strong>Review analytics</strong>
+                        <small>Today • Medium priority</small>
+                    </div>
+                    <span class="task-tag medium">Medium</span>
+                </div>
+
+                <div class="task-row">
+                    <button class="task-check"></button>
+                    <div>
+                        <strong>Prepare weekly report</strong>
+                        <small>Tomorrow • Medium priority</small>
+                    </div>
+                    <span class="task-tag medium">Medium</span>
+                </div>
+
+                <div class="task-row">
+                    <button class="task-check"></button>
+                    <div>
+                        <strong>Team meeting</strong>
+                        <small>Friday • Low priority</small>
+                    </div>
+                    <span class="task-tag low">Low</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

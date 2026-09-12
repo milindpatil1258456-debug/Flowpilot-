@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — FlowPilot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">✦ FlowPilot</div>
+
+        <nav class="dashboard-nav">
+
+    <a href="dashboard.html">
+        <span>⌂</span>
+        Overview
+    </a>
+
+    <a href="tasks.html">
+        <span>✓</span>
+        Tasks
+    </a>
+
+    <a href="projects.html" class="active">
+        <span>▣</span>
+        Projects
+    </a>
+
+    <a href="analytics.html">
+        <span>◈</span>
+        Analytics
+    </a>
+
+    <a href="settings.html">
+        <span>⚙</span>
+        Settings
+    </a>
+
+</nav>
+
+        <a href="index.html" class="back-link">
+            ← Back to website
+        </a>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+        <div class="dashboard-top">
+
+            <div>
+                <p class="eyebrow">WORKSPACE</p>
+                <h1>Projects</h1>
+                <p>Track and manage everything you're working on.</p>
+            </div>
+
+            <button class="add-project" id="addProjectBtn">
+                + New Project
+            </button>
+
+        </div>
+
+
+        <section class="projects-grid">
+
+
+            <div class="project-card">
+
+                <div class="project-card-top">
+                    <div class="project-icon">W</div>
+
+                    <span class="project-status active-status">
+                        Active
+                    </span>
+                </div>
+
+                <h2>Website Redesign</h2>
+
+                <p>
+                    Redesign the company website with a modern SaaS experience.
+                </p>
+
+                <div class="project-meta">
+                    <span>👥 4 members</span>
+                    <span>📅 Sep 12</span>
+                </div>
+
+                <div class="progress-info">
+                    <span>Progress</span>
+                    <strong>78%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div style="width: 78%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-card-top">
+                    <div class="project-icon">M</div>
+
+                    <span class="project-status active-status">
+                        Active
+                    </span>
+                </div>
+
+                <h2>Marketing Campaign</h2>
+
+                <p>
+                    Plan and launch the next product marketing campaign.
+                </p>
+
+                <div class="project-meta">
+                    <span>👥 6 members</span>
+                    <span>📅 Sep 18</span>
+                </div>
+
+                <div class="progress-info">
+                    <span>Progress</span>
+                    <strong>54%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div style="width: 54%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-card-top">
+                    <div class="project-icon">P</div>
+
+                    <span class="project-status planning-status">
+                        Planning
+                    </span>
+                </div>
+
+                <h2>Product Launch</h2>
+
+                <p>
+                    Prepare the launch strategy for the upcoming product.
+                </p>
+
+                <div class="project-meta">
+                    <span>👥 3 members</span>
+                    <span>📅 Oct 02</span>
+                </div>
+
+                <div class="progress-info">
+                    <span>Progress</span>
+                    <strong>32%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div style="width: 32%;"></div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const addProjectBtn = document.getElementById("addProjectBtn");
+    const projectsGrid = document.querySelector(".projects-grid");
+
+    if (!addProjectBtn || !projectsGrid) return;
+
+    addProjectBtn.addEventListener("click", function () {
+
+        const projectName = prompt("Enter project name:");
+
+        if (!projectName || projectName.trim() === "") {
+            return;
+        }
+
+        const name = projectName.trim();
+
+        const projectCard = document.createElement("div");
+        projectCard.className = "project-card";
+
+        projectCard.innerHTML = `
+            <div class="project-card-top">
+                <div class="project-icon">
+                    ${name.charAt(0).toUpperCase()}
+                </div>
+
+                <span class="project-status active-status">
+                    Active
+                </span>
+            </div>
+
+            <h2>${name}</h2>
+
+            <p>
+                New project created in your FlowPilot workspace.
+            </p>
+
+            <div class="project-meta">
+                <span>👥 1 member</span>
+                <span>📅 Today</span>
+            </div>
+
+            <div class="progress-info">
+                <span>Progress</span>
+                <strong>0%</strong>
+            </div>
+
+            <div class="progress-bar">
+                <div style="width: 0%;"></div>
+            </div>
+        `;
+
+        projectsGrid.appendChild(projectCard);
+
+    });
+
+});
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
